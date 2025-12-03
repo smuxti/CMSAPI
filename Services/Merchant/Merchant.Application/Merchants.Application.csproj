@@ -1,0 +1,63 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Commands\Banks\**" />
+    <Compile Remove="Commands\FeeSlabs\**" />
+    <Compile Remove="Commands\Merchants\**" />
+    <Compile Remove="Commands\Terminals\**" />
+    <Compile Remove="Handlers\Banks\**" />
+    <Compile Remove="Handlers\Merchants\**" />
+    <Compile Remove="Handlers\Slabs\**" />
+    <Compile Remove="Handlers\Terminals\**" />
+    <EmbeddedResource Remove="Commands\Banks\**" />
+    <EmbeddedResource Remove="Commands\FeeSlabs\**" />
+    <EmbeddedResource Remove="Commands\Merchants\**" />
+    <EmbeddedResource Remove="Commands\Terminals\**" />
+    <EmbeddedResource Remove="Handlers\Banks\**" />
+    <EmbeddedResource Remove="Handlers\Merchants\**" />
+    <EmbeddedResource Remove="Handlers\Slabs\**" />
+    <EmbeddedResource Remove="Handlers\Terminals\**" />
+    <None Remove="Commands\Banks\**" />
+    <None Remove="Commands\FeeSlabs\**" />
+    <None Remove="Commands\Merchants\**" />
+    <None Remove="Commands\Terminals\**" />
+    <None Remove="Handlers\Banks\**" />
+    <None Remove="Handlers\Merchants\**" />
+    <None Remove="Handlers\Slabs\**" />
+    <None Remove="Handlers\Terminals\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Mappers\MerchantTransactionTypeMappingProfile.cs" />
+    <Compile Remove="Mappers\OneLinkMappingProfile.cs" />
+    <Compile Remove="Mappers\TerminalMappingProfile.cs" />
+    <Compile Remove="Queries\GetAllTenantsQuery.cs" />
+    <Compile Remove="Queries\GetAllTerminalsQuery.cs" />
+    <Compile Remove="Queries\GetAllTransactionTypesQuery.cs" />
+    <Compile Remove="Queries\GetMerchantListQuery.cs" />
+    <Compile Remove="Queries\GetTerminalBySerialNumberQuery.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\EmailManager\EmailManager.csproj" />
+    <ProjectReference Include="..\..\..\Infrastructure\AuthenticationManager\AuthenticationManager.csproj" />
+    <ProjectReference Include="..\Merchant.Core\Merchants.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="FluentValidation" Version="11.9.2" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.2" />
+    <PackageReference Include="MediatR" Version="12.3.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
+    <PackageReference Include="Quartz.Extensions.Hosting" Version="3.13.1" />
+    <PackageReference Include="StackExchange.Redis" Version="2.8.0" />
+  </ItemGroup>
+
+</Project>
